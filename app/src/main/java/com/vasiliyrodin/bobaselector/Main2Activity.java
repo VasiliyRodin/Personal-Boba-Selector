@@ -20,7 +20,6 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void backButtonClick(View view){
-        startActivity(new Intent("com.vasiliyrodin.MainActivity"));
+        finish();
     }
-
 }
