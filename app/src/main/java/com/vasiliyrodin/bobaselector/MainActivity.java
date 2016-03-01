@@ -3,6 +3,7 @@ package com.vasiliyrodin.bobaselector;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.content.Intent;
 
 import java.util.Random;
 
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         String randomDrink = selectRandomBoba();
         // send result of randomBoba as intent to next Screen.
 
+        Intent i = new Intent("com.vasiliyrodin.PassingDataSecondActivity");
+        i.putExtra("boba", randomDrink);
+        startActivity(i);
     }
 
     public String selectRandomBoba(){
