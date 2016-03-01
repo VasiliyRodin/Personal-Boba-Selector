@@ -7,17 +7,20 @@ import android.widget.TextView;
 import android.view.View;
 
 public class Main2Activity extends AppCompatActivity {
-    TextView bobaTextView = (TextView)findViewById(R.id.bobaView);
+    TextView bobaTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        bobaTextView = (TextView) findViewById(R.id.bobaView);
         Intent intent = getIntent();
         String generatedBoba = intent.getExtras().getString("boba");
         bobaTextView.setText(generatedBoba);
     }
 
-
+    public void backButtonClick(View view){
+        startActivity(new Intent("com.vasiliyrodin.MainActivity"));
+    }
 
 }
