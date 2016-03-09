@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String selectRandomBoba(){
         String[] teaFlavor = {"Assam", "Toffee", "Earl Grey", "High Mountain Oolong","Peach Oolong", "Dark Roast Oolong", "Jasmine","Osmanthus", "Hojicha", "Rose" , "Ceylon", "Lychee", "White Grape Oolong", "Matcha Green Tea Latte"};
-        String[] toppings = {"Boba", "Grass Jelly", "Mango Pudding", "Aloe Vera", "Red Bean", "Rainbow Jelly", "Coffee Jelly", "Lychee Jelly", "Fresh Taro","Crystal Boba" };
+        String[] toppings = {"Boba", "Grass Jelly", "Mango Pudding", "Aloe Vera", "Red Bean", "Rainbow Jelly", "Coffee Jelly", "Lychee Jelly", "Fresh Taro","Crystal Boba"};
 
         int teaFlavorLength = teaFlavor.length;
         int toppingsLength  = toppings.length;
