@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Boba Selector</string>
+    <string-array name="bobaPlace_array">
+        <item>Tea Station</item>
+        <item>Super Que</item>
+        <item>T4</item>
+    </string-array>
 </resources>
