@@ -16,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
     String[] bobaPlaces;
     String[] superQueTea = {"Assam", "Toffee", "Earl Grey", "High Mountain Oolong","Peach Oolong", "Dark Roast Oolong", "Jasmine","Osmanthus", "Hojicha", "Rose" , "Ceylon", "Lychee", "White Grape Oolong", "Matcha Green Tea Latte"};
     String[] superQueBoba = {"Boba", "Grass Jelly", "Mango Pudding", "Aloe Vera", "Red Bean", "Rainbow Jelly", "Coffee Jelly", "Lychee Jelly", "Fresh Taro","Crystal Boba"};
-
-
-
+    String[] t4Tea = {"A","B","C"};
+    String[] t4Boba = {"a","b","c"};
+    String[] teaStationTea = {"1","2","3"};
+    String[] teaStationBoba = {"4","5","6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int index = arg0.getSelectedItemPosition();
-                selectCorrectStore(bobaPlaces[index]);
                 Toast.makeText(getBaseContext(),"You have selected: " + bobaPlaces[index], Toast.LENGTH_SHORT).show();
             }
             @Override
@@ -43,26 +43,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public String selectCorrectStore(String store){
-        String drink;
-        String chosenStore = store;
-        if (chosenStore == "Super Que") {
-            // Run makeMeBoba with the superQue menu
-            drink = selectRandomBoba(superQueTea,superQueBoba);
-        } else if(chosenStore == "T4"){
-            // RUn make me bob with the T4 menu
-            drink = selectRandomBoba(t4Tea,t4Boba);
-        }
-        else if(chosenStore == "Tea Station"){
-            //Run makeMeBoba with Tea Station menu
-            drink = selectRandomBoba(teaStationTea,teaStationBoba);
-        };
-        return drink;
-    }
-
-
     public void makeMeBoba(View view){
-        String randomDrink = selectRandomBoba();
+        String randomDrink = selectRandomBoba(superQueTea, superQueBoba);
         // send result of randomBoba as intent to next Screen.
 
         Intent i = new Intent("com.vasiliyrodin.PassingDataSecondActivity");
