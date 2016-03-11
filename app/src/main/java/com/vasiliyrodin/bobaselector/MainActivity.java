@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int index = arg0.getSelectedItemPosition();
+                //Need to get info from here to makemeBoba for the correct boba selection.
                 Toast.makeText(getBaseContext(),"You have selected: " + bobaPlaces[index], Toast.LENGTH_SHORT).show();
             }
             @Override
@@ -51,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("boba", randomDrink);
         startActivity(i);
     }
-
+    /*
+    Creates the correct drink using the correct info.
+     */
     public String selectRandomBoba(String[] tea, String[] boba){
         String[] teaFlavor = tea;
         String[] toppings = boba;
