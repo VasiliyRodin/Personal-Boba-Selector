@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         bobaPlaces = getResources().getStringArray(R.array.bobaPlace_array);
         Spinner s1 = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, bobaPlaces);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         s1.setAdapter(adapter);
         s1.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -50,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
         Spinner mySpinner=(Spinner) findViewById(R.id.spinner);
         String text = mySpinner.getSelectedItem().toString();
 
-        if(text=="Super Que"){
+        if(text.equals("Super Que")){
             randomDrink = selectRandomBoba(superQueTea, superQueBoba);
-        } else if (text == "Tea Station"){
+        } else if (text.equals("Tea Station")){
             randomDrink = selectRandomBoba(teaStationTea, teaStationBoba);
-        } else if (text == "T4"){
+        } else if (text.equals("T4")){
             randomDrink = selectRandomBoba(t4Tea, t4Boba);
         }
         // send result of randomBoba as intent to next Screen.
