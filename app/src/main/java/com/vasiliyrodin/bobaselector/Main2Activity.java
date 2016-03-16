@@ -12,7 +12,6 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
         bobaTextView = (TextView) findViewById(R.id.bobaView);
         Intent intent = getIntent();
         String generatedBoba = intent.getExtras().getString("boba");
